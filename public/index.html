@@ -7,143 +7,89 @@
     <title>Premiere AI</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="app">
+    <header class="header">
+        <div class="brand">
+            <div class="logo">P</div>
 
-        <!-- HEADER -->
-        <header class="header">
-
-            <div class="logo-container">
-                <div class="logo">P</div>
-
-                <div class="brand">
-                    <h1>Premiere <span>AI</span></h1>
-                    <p>Adobe Premiere Pro Assistant</p>
-                </div>
+            <div>
+                <h1>Premiere AI</h1>
+                <p>Adobe Premiere Pro Assistant</p>
             </div>
+        </div>
 
-            <button class="new-chat-button" id="newChat">
-                <span>＋</span>
-                Nieuwe chat
-            </button>
+        <button id="newChatBtn" class="new-chat">
+            + Nieuwe chat
+        </button>
+    </header>
 
-        </header>
+    <main class="main">
 
+        <section id="welcome" class="welcome">
 
-        <!-- CHAT -->
-        <main class="chat-container">
+            <div class="welcome-icon">🎬</div>
 
-            <section class="welcome-screen" id="welcomeScreen">
+            <h2>Waar kan ik je mee helpen?</h2>
 
-                <div class="welcome-icon">
-                    ✦
-                </div>
+            <p>
+                Stel een vraag over Adobe Premiere Pro,
+                effecten, montage, audio of export.
+            </p>
 
-                <h2>Waar kan ik je mee helpen?</h2>
+            <div class="suggestions">
 
-                <p>
-                    Stel een vraag over Adobe Premiere Pro.
-                    Ik help je stap voor stap.
-                </p>
+                <button class="suggestion"
+                    data-question="Hoe maak ik een smooth zoom effect?">
+                    🔍 Smooth zoom
+                </button>
 
-                <div class="suggestions">
+                <button class="suggestion"
+                    data-question="Hoe maak ik mijn video zwart-wit?">
+                    🎨 Zwart-wit
+                </button>
 
-                    <button class="suggestion"
-                        data-question="Hoe maak ik een smooth zoom?">
+                <button class="suggestion"
+                    data-question="Hoe verbeter ik het geluid van mijn video?">
+                    🎧 Audio verbeteren
+                </button>
 
-                        <span class="suggestion-icon">↗</span>
-
-                        <div>
-                            <strong>Smooth zoom</strong>
-                            <small>Maak vloeiende zoombewegingen</small>
-                        </div>
-
-                    </button>
-
-
-                    <button class="suggestion"
-                        data-question="Hoe maak ik mijn video zwart-wit?">
-
-                        <span class="suggestion-icon">◐</span>
-
-                        <div>
-                            <strong>Kleurcorrectie</strong>
-                            <small>Pas de kleuren van je video aan</small>
-                        </div>
-
-                    </button>
-
-
-                    <button class="suggestion"
-                        data-question="Hoe zorg ik ervoor dat mijn audio harder klinkt?">
-
-                        <span class="suggestion-icon">♫</span>
-
-                        <div>
-                            <strong>Audio verbeteren</strong>
-                            <small>Verbeter het geluid van je video</small>
-                        </div>
-
-                    </button>
-
-
-                    <button class="suggestion"
-                        data-question="Hoe exporteer ik mijn video in de beste kwaliteit?">
-
-                        <span class="suggestion-icon">⇧</span>
-
-                        <div>
-                            <strong>Video exporteren</strong>
-                            <small>De juiste exportinstellingen</small>
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- MESSAGES -->
-            <section class="messages" id="messages"></section>
-
-        </main>
-
-
-        <!-- INPUT -->
-        <footer class="input-area">
-
-            <div class="input-wrapper">
-
-                <textarea
-                    id="messageInput"
-                    placeholder="Stel een vraag over Premiere Pro..."
-                    rows="1"
-                ></textarea>
-
-                <button id="sendButton" class="send-button" aria-label="Verstuur">
-                    ↑
+                <button class="suggestion"
+                    data-question="Wat zijn de beste exportinstellingen voor YouTube?">
+                    📤 Exportinstellingen
                 </button>
 
             </div>
 
-            <p class="disclaimer">
-                Premiere AI kan fouten maken. Controleer belangrijke informatie.
-            </p>
+        </section>
 
-        </footer>
+        <section id="messages" class="messages"></section>
 
-    </div>
+    </main>
 
+    <footer class="chat-footer">
+
+        <div class="input-container">
+
+            <textarea
+                id="userInput"
+                placeholder="Stel je vraag over Premiere Pro..."
+                rows="1"
+            ></textarea>
+
+            <button id="sendBtn" class="send-button">
+                ↑
+            </button>
+
+        </div>
+
+        <p class="disclaimer">
+            Premiere AI kan fouten maken. Controleer belangrijke instellingen altijd.
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
